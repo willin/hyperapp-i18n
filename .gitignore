@@ -1,6 +1,7 @@
 # IDE
 .idea/
 .vscode/
+.nyc_output/
 
 # Logs
 *.log*
@@ -10,6 +11,7 @@ package-lock.json
 # Misc
 node_modules
 coverage
+coverage.lcov
 *.xml
 
 # Dist

@@ -10,6 +10,8 @@
     "bundle": "rollup -i src/index.js -o dist/i18n.js -f umd -mn i18n -g hyperapp:hyperapp",
     "minify": "uglifyjs dist/i18n.js -o dist/i18n.js -mc pure_funcs=Object.defineProperty --source-map includeSources,url=i18n.js.map",
     "prepare": "npm run build",
+    "test": "nyc ava -v",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov | codecov",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "keywords": [
@@ -27,12 +29,16 @@
   "author": "Willin Wang <willin@willin.org>",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^1.0.0-beta.3",
     "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "codecov": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-dwing": "^1.2.0",
     "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-jsx": "^0.0.2",
     "hyperapp": "^1.1.2",
+    "nyc": "^11.4.1",
     "parcel-bundler": "^1.6.2",
     "rollup": "^0.56.3",
     "uglify-js": "^3.3.12"
@@ -40,5 +46,28 @@
   "peerDependencies": {
     "hyperapp": "^1.1.2"
   },
-  "dependencies": {}
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!**/_*/*.js",
+      "!**/_*.js"
+    ],
+    "require": [
+      "babel-register"
+    ]
+  },
+  "nyc": {
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text"
+    ],
+    "report-dir": "./.nyc_output",
+    "exclude": [
+      "test",
+      "test{,-*}.js",
+      "**/*.test.js",
+      "**/__tests__/**"
+    ]
+  }
 }

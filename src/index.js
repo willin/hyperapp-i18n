@@ -6,7 +6,7 @@
  */
 export default (locales = {}, defaultLang = '') => {
   const langs = Object.keys(locales);
-  const defaultLocale = ~langs.findIndex(lang => lang === defaultLang) ? langs[0] : defaultLang;
+  const defaultLocale = ~langs.findIndex(lang => lang === defaultLang) ? defaultLang : langs[0];
   const state = {
     defaultLocale,
     locale: defaultLocale,
