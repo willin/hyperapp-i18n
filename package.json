@@ -5,12 +5,11 @@
   "jsnext:main": "src/index.js",
   "module": "src/index.js",
   "scripts": {
-    "test": "jest --coverage --no-cache",
+    "example": "parcel example/index.html --no-cache",
     "build": "npm run bundle && npm run minify",
     "bundle": "rollup -i src/index.js -o dist/i18n.js -f umd -mn i18n -g hyperapp:hyperapp",
     "minify": "uglifyjs dist/i18n.js -o dist/i18n.js -mc pure_funcs=Object.defineProperty --source-map includeSources,url=i18n.js.map",
-    "prepublish": "npm run build",
-    "format": "prettier --semi false --write 'src/**/*.js'",
+    "prepare": "npm run build",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "keywords": [
@@ -21,16 +20,25 @@
     "src",
     "dist"
   ],
+  "babel": {
+    "presets": "env"
+  },
   "repository": "git@github.com:hyperapp/i18n.git",
   "author": "Willin Wang <willin@willin.org>",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.16.0",
     "eslint-config-dwing": "^1.2.0",
     "eslint-plugin-html": "^4.0.1",
-    "eslint-plugin-jsx": "^0.0.2"
+    "eslint-plugin-jsx": "^0.0.2",
+    "hyperapp": "^1.1.2",
+    "parcel-bundler": "^1.6.2",
+    "rollup": "^0.56.3",
+    "uglify-js": "^3.3.12"
   },
   "peerDependencies": {
-    "hyperapp": "^1.0.2"
-  }
+    "hyperapp": "^1.1.2"
+  },
+  "dependencies": {}
 }
