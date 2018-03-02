@@ -12,7 +12,7 @@ Install with npm or Yarn.
 npm i @hyperapp/i18n
 ```
 
-If you don't want to set up a build environment, you can download Hyperapp Gizmo from a CDN like [unpkg.com](https://unpkg.com/@hyperapp/i18n) and it will be globally available through the window.gizmo object. If your library is a high-order-app, export it as window.i18n.
+If you don't want to set up a build environment, you can download Hyperapp I18n from a CDN like [unpkg.com](https://unpkg.com/@hyperapp/i18n) and it will be globally available through the window.i18n object. If your library is a high-order-app, export it as window.i18n.
 
 ```html
 <script src="https://unpkg.com/@hyperapp/i18n"></script>
