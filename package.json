@@ -25,7 +25,7 @@
   "babel": {
     "presets": "env"
   },
-  "repository": "git@github.com:hyperapp/i18n.git",
+  "repository": "git@github.com:willin/hyperapp-i18n.git",
   "author": "Willin Wang <willin@willin.org>",
   "license": "MIT",
   "devDependencies": {
