@@ -1,6 +1,6 @@
-# <img height=24 src=https://cdn.rawgit.com/jorgebucaran/f53d2c00bafcf36e84ffd862f0dc2950/raw/882f20c970ff7d61aa04d44b92fc3530fa758bc0/Hyperapp.svg> @hyperapp/i18n
+# <img height=24 src=https://cdn.rawgit.com/jorgebucaran/f53d2c00bafcf36e84ffd862f0dc2950/raw/882f20c970ff7d61aa04d44b92fc3530fa758bc0/Hyperapp.svg> hyperapp-i18n
 
-[![Travis CI](https://img.shields.io/travis/hyperapp/i18n/master.svg)](https://travis-ci.org/hyperapp/i18n) [![Codecov](https://img.shields.io/codecov/c/github/hyperapp/i18n/master.svg)](https://codecov.io/gh/hyperapp/i18n) [![npm](https://img.shields.io/npm/v/@hyperapp/i18n.svg)](https://www.npmjs.org/package/@hyperapp/i18n) [![Slack](https://hyperappjs.herokuapp.com/badge.svg)](https://hyperappjs.herokuapp.com "Join us")
+[![Travis CI](https://img.shields.io/travis/willin/hyperapp-i18n/master.svg)](https://travis-ci.org/willin/hyperapp-i18n) [![Codecov](https://img.shields.io/codecov/c/github/willin/hyperapp-i18n/master.svg)](https://codecov.io/gh/willin/hyperapp-i18n) [![npm](https://img.shields.io/npm/v/hyperapp-i18n.svg)](https://www.npmjs.org/package/hyperapp-i18n) [![Slack](https://hyperappjs.herokuapp.com/badge.svg)](https://hyperappjs.herokuapp.com "Join us")
 
 I18n Plugin for [Hyperapp](https://github.com/hyperapp/hyperapp).
 
@@ -9,20 +9,20 @@ I18n Plugin for [Hyperapp](https://github.com/hyperapp/hyperapp).
 Install with npm or Yarn.
 
 ```
-npm i @hyperapp/i18n
+npm i hyperapp-i18n
 ```
 
-If you don't want to set up a build environment, you can download Hyperapp I18n from a CDN like [unpkg.com](https://unpkg.com/@hyperapp/i18n) and it will be globally available through the window.i18n object. If your library is a high-order-app, export it as window.i18n.
+If you don't want to set up a build environment, you can download Hyperapp I18n from a CDN like [unpkg.com](https://unpkg.com/hyperapp-i18n) and it will be globally available through the window.i18n object. If your library is a high-order-app, export it as window.i18n.
 
 ```html
-<script src="https://unpkg.com/@hyperapp/i18n"></script>
+<script src="https://unpkg.com/hyperapp-i18n"></script>
 ```
 
 ## Usage
 
 ```js
 // i18n.js
-import i18n from '@hyperapp/i18n';
+import i18n from 'hyperapp-i18n';
 
 export const { state, actions } = i18n({
   'zh-CN': {

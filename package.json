@@ -1,5 +1,5 @@
 {
-  "name": "@hyperapp/i18n",
+  "name": "hyperapp-i18n",
   "version": "0.0.1",
   "main": "dist/i18n.js",
   "jsnext:main": "src/index.js",
