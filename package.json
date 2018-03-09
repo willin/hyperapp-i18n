@@ -41,8 +41,8 @@
     "hyperapp": "^1.1.2",
     "nyc": "^11.4.1",
     "parcel-bundler": "^1.6.2",
-    "rollup": "^0.56.3",
-    "uglify-js": "^3.3.12"
+    "rollup": "^0.56.5",
+    "uglify-js": "^3.3.13"
   },
   "peerDependencies": {
     "hyperapp": "^1.1.2"
