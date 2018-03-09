@@ -23,8 +23,7 @@
     "dist"
   ],
   "babel": {
-    "presets": "env",
-    "plugins": ["transform-runtime"]
+    "presets": "env"
   },
   "repository": "git@github.com:willin/hyperapp-i18n.git",
   "author": "Willin Wang <willin@willin.org>",
