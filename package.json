@@ -6,7 +6,7 @@
   "module": "src/index.js",
   "scripts": {
     "example": "parcel example/index.html --no-cache",
-    "build": "npm run bundle && npm run minify",
+    "build": "rm -rf dist/ && npm run bundle && npm run minify",
     "bundle": "rollup -i src/index.js -o dist/i18n.js -f umd -mn i18n -g hyperapp:hyperapp",
     "minify": "uglifyjs dist/i18n.js -o dist/i18n.js -mc pure_funcs=Object.defineProperty --source-map includeSources,url=i18n.js.map",
     "prepare": "npm run build",
