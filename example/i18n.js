@@ -1,4 +1,4 @@
-import i18n from '../src';
+import i18n from '../dist/i18n';
 import zhCN from './zh-CN';
 import enUS from './en-US';
 
